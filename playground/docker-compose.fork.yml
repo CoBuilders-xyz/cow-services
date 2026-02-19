@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile.chain
     restart: always
     entrypoint: /usr/local/bin/anvil
-    command: --fork-url ${ETH_RPC_URL} --block-time 12
+    command: --fork-url ${ETH_RPC_URL} --block-time 12 --steps-tracing
     environment:
       - ANVIL_IP_ADDR=0.0.0.0
     ports:
